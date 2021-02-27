@@ -4,7 +4,7 @@ export const initialState = {
     playing: false,
     item: null,
     // remove token after deployment
-     token: "BQCFTjZCR2uOKjf66R0K3W3UTtW6-k8setdHuHxFMAL3lnHPPe…7XJM9xldpioNmEEvHoosobGjDdpBxBWbY5N2NN72nnNdb11n-"
+    token: "BQCFTjZCR2uOKjf66R0K3W3UTtW6-k8setdHuHxFMAL3lnHPPe…7XJM9xldpioNmEEvHoosobGjDdpBxBWbY5N2NN72nnNdb11n-"
 }
 
 const reducer = (state, action)=>{
@@ -25,6 +25,11 @@ const reducer = (state, action)=>{
             return {
                 ...state,
                 playlists: action.playlists
+            }
+        case 'SET_DISCOVER_WEEKLY':
+            return {
+                ...state,
+                discover_weekly: action.discover_weekly
             }
         default:
             return state;
